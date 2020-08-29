@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# TODO 
+# echo input cliget stuff
+# how to split?
+
+echo  Endpage to load?
+
+read pagein
+
+for pagelow in {1..9}
+	do 
+ 		#add cliget clipboard stuff here # https://reader.exacteditions.com/issues/#####/page/$pagelow.pdf 
+	done
+
+for ((pagehigh=10; pagehigh<=$pagein; pagehigh++));
+
+	do 
+		#add cliget clipboard stuff here # ttps://reader.exacteditions.com/issues/#####/page/$pagehigh.pdf
+	
+	done
+
+# TODO
+# automatically merge pdfs with pdftk
+# pdftk file1.pdf file2.pdf  cat output merged_output.pdf
