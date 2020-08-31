@@ -1,11 +1,19 @@
 # ExactPDF
 
-Exact Editions (exacteditions.com) PDF Downloader
+Exact Editions PDF Downloader 
 
-You will need an Exact Editions Account (no piracy thing here!)
+(https://exacteditions.com)
 
-You will also need cliget for Firefox (https://github.com/zaidka/cliget)
+You will need an Exact Editions account (no piracy thing here!)
 
-At this point the bash script is handcrafted, cliget input has to be pasted directly into the code
+You will also need cliget for Firefox
 
-Also merge of PDF pages does not work rigth now, pdftk has to be integrated, not working on my WSL
+(https://github.com/zaidka/cliget)
+
+**How to use:**
+
+1) Login at exacteditions.com, choose magazine and then download one page (= just click the printer icon)
+
+2) Cliget-plugin will give you some data: copy! (make sure you export data for "pages" not "spreads"; otherwise you'll have to change the script)
+
+3) Run the script: enter issue number (see URL), enter last page of the issue, paste cliget-stuff and run
