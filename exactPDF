@@ -1,25 +1,51 @@
 #!/bin/bash
 
-# TODO 
-# echo input cliget stuff
-# how to split?
+# Author: tfr00
+# Started: 25.08.2020
 
-echo  Endpage to load?
 
+# How to use:
+# Login at exacteditions.com, choose magazine and then download just one page (or just click printer icon)
+# Cliget-Plugin: Make sure you export info for "pages" not "spreads"; otherwise you'll have to change this script
+
+
+
+echo Enter issue number from URL:
+read linkissue
+
+echo Enter last page number:
 read pagein
 
+echo Insert cliget-link here:
+read linkin
+
+
+
 for pagelow in {1..9}
-	do 
- 		#add cliget clipboard stuff here # https://reader.exacteditions.com/issues/#####/page/$pagelow.pdf 
+
+	do
+		echo ${linkin%"--header 'Upgrade-Insecure-Requests: 1' "*} https://reader.exacteditions.com/issues/$linkissue/page/$pagelow.pdf > download.txt 
+		bash download.txt
 	done
+
 
 for ((pagehigh=10; pagehigh<=$pagein; pagehigh++));
 
-	do 
-		#add cliget clipboard stuff here # ttps://reader.exacteditions.com/issues/#####/page/$pagehigh.pdf
-	
+	do
+		echo ${linkin%"--header 'Upgrade-Insecure-Requests: 1' "*} https://reader.exacteditions.com/issues/$linkissue/page/$pagehigh.pdf > download.txt
+		bash download.txt
 	done
 
+
+
 # TODO
-# automatically merge pdfs with pdftk
-# pdftk file1.pdf file2.pdf  cat output merged_output.pdf
+# Ask for filename of output PDF
+# Automatically merge pdfs with pdftk (not tested yet; tested pdftk/snap not working on WSL2) 
+# pdftk *.pdf cat output exacteditions.pdf
+
+
+rm download.txt
+
+# rm *.pdf
+
+echo  **DONE**
