@@ -1,4 +1,4 @@
-yhead>
+<head>
 <meta name="google-site-verification" content="iIgI7sDxCmEUce1A39Az4HqwBQ8isvVIadEbKbsjqvk" />
 </head>
 
