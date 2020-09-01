@@ -1,6 +1,6 @@
 # ExactPDF
 
-Exact Editions PDF Downloader 
+Exact Editions PDF Downloader - Bash Script
 
 (https://exacteditions.com)
 
